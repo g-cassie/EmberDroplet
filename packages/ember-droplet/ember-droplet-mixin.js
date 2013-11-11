@@ -263,7 +263,8 @@ window.DropletController = Ember.Mixin.create({
             });
 
             // We want to revert the upload status.
-            Ember.set(this, 'uploadStatus.uploading', false);
+            Ember.set(this, 'uploadStatus',
+                { uploading: false, percentComplete: 0, error: false });
 
         }.bind(this), false);
 
